@@ -47,8 +47,9 @@ fi
 LISTEN_CLI="$(awk 'END{print $1}' /etc/hosts):9901"
 
 OPTIONS=""
-OPTIONS="$OPTIONS --interface=$INTERFACE --listen-ng=$LISTEN_NG --listen-cli=$LISTEN_CLI --pidfile=$PIDFILE --port-min=$PORT_MIN --port-max=$PORT_MAX "
+OPTIONS="$OPTIONS --interface=$INTERFACE!192.168.216.129 --listen-ng=$LISTEN_NG --listen-cli=$LISTEN_CLI --pidfile=$PIDFILE --port-min=$PORT_MIN --port-max=$PORT_MAX "
 OPTIONS="$OPTIONS --table=$TABLE  --tos=$TOS --foreground"
+OPTIONS="$OPTIONS --homer=192.168.216.129:9060 --homer-protocol=udp --homer-id=2001"
 
 if test "$NO_FALLBACK" = "yes" ; then
 	OPTIONS="$OPTIONS --no-fallback"

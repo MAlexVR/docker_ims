@@ -57,7 +57,7 @@ RUN cd / && wget http://archive.apache.org/dist/ant/binaries/apache-ant-1.9.14-b
 
 RUN mkdir -p /opt/OpenIMSCore && \
 	cd /opt/OpenIMSCore && \
-	git clone https://github.com/herlesupreeth/FHoSS
+	git clone https://github.com/MauricioV/FHoSS
 
 ENV JAVA_HOME="/usr/lib/jvm/jdk1.7.0_80"
 ENV CLASSPATH="/usr/lib/jvm/jdk1.7.0_80/jre/lib/"
